@@ -146,7 +146,7 @@ class matcher:
         except KeyError:
             return False
         if debugging:
-            print "Trying completer %r with %r" % (completer, ctxt)
+            print("Trying completer %r with %r" % (completer, ctxt))
         try:
             new_compls = completer(ctxt)
         except Exception:
@@ -155,7 +155,7 @@ class matcher:
                 traceback.print_exc()
             return False
         if debugging:
-            print "got %r" % (new_compls,)
+            print("got %r" % (new_compls,))
         completions.update(new_compls)
         return True
 
@@ -284,7 +284,7 @@ class text_match(terminal_matcher):
         try:
             terminal_matcher.__init__(self, eval(text))
         except SyntaxError:
-            print "bad syntax %r" % (text,)
+            print("bad syntax %r" % (text,))
 
     def match(self, ctxt, completions):
         if ctxt.remainder:

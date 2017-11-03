@@ -161,6 +161,6 @@ def profile_off(pr, file_name):
     ret = s.getvalue()
     if file_name:
         with open(file_name, 'w') as f:
-            print "Writing to %s\n" % (f.name, )
+            print("Writing to %s\n" % (f.name, ))
             f.write(ret)
     return ret
